@@ -57,16 +57,16 @@ namespace Calculator
             switch (mathOperation)
             {
                 case "+":
-                    TbResault.Text = (value + Double.Parse(TbResault.Text)).ToString();
+                    TbResault.Text = CalculatorHelper.Add(value, Double.Parse(TbResault.Text)).ToString();
                     break;
                 case "-":
-                    TbResault.Text = (value - Double.Parse(TbResault.Text)).ToString();
+                    TbResault.Text = CalculatorHelper.Subtract(value, Double.Parse(TbResault.Text)).ToString();
                     break;
                 case "/":
-                    TbResault.Text = (value / Double.Parse(TbResault.Text)).ToString();
+                    TbResault.Text = CalculatorHelper.Divide(value, Double.Parse(TbResault.Text)).ToString();
                     break;
                 case "*":
-                    TbResault.Text = (value * Double.Parse(TbResault.Text)).ToString();
+                    TbResault.Text = CalculatorHelper.Multiply(value, Double.Parse(TbResault.Text)).ToString();
                     break;
                 default:
                     break;
